@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Task Manager</title>
+
+    <!-- Connecting CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Student Task Manager</h1>
+        <p>Organize your tasks, manage deadlines and stay productive.</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Add Task Section -->
+        <section id="add-task-section">
+            <h2>Add New Task</h2>
+
+            <form id="task-form">
+
+                <label for="task-title">Task Name</label>
+                <input
+                    type="text"
+                    id="task-title"
+                    placeholder="Enter your task name"
+                    required
+                >
+
+                <label for="task-description">Description</label>
+                <textarea
+                    id="task-description"
+                    placeholder="Enter task details"
+                ></textarea>
+
+                <label for="task-deadline">Deadline</label>
+                <input
+                    type="date"
+                    id="task-deadline"
+                    required
+                >
+
+                <label for="task-priority">Priority</label>
+                <select id="task-priority" required>
+                    <option value="">Select Priority</option>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+
+                <button type="submit" id="add-task-btn">
+                    Add Task
+                </button>
+
+            </form>
+        </section>
+
+        <!-- Task Management Section -->
+        <section id="task-list-section">
+
+            <h2>My Tasks</h2>
+
+            <!-- Task Filters -->
+            <div id="task-filters">
+
+                <button type="button" class="filter-btn" data-filter="all">
+                    All Tasks
+                </button>
+
+                <button type="button" class="filter-btn" data-filter="pending">
+                    Pending
+                </button>
+
+                <button type="button" class="filter-btn" data-filter="completed">
+                    Completed
+                </button>
+
+            </div>
+
+            <!-- Tasks will appear here -->
+            <div id="task-list">
+                <p id="empty-message">
+                    No tasks added yet. Start by adding your first task!
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Student Task Manager | Manage your time better.</p>
+    </footer>
+
+    <!-- Connecting JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
